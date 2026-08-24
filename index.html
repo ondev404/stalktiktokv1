@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f5efd9">
+<title>STALKTIK — TikTok Profile</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg-grid"></div><div class="noise"></div>
+
+<header>
+  <div class="brand-wrap">
+    <div class="logo-orb"><span>ST</span><i>✦</i></div>
+    <div class="brand"><b>STALK</b><strong>TIK</strong><small id="brandSub">PROFILE SCANNER</small></div>
+  </div>
+  <div class="head-actions">
+    <div class="lang"><button class="active" data-lang="id">ID</button><button data-lang="en">EN</button></div>
+    <button class="theme" id="theme">☼</button>
+  </div>
+</header>
+
+<main>
+  <section class="search">
+    <div class="search-title">
+      <span class="eyebrow" data-i18n="eyebrow">PUBLIC PROFILE</span>
+      <h1 data-i18n="title">TikTok Profile</h1>
+    </div>
+    <form id="form">
+      <div class="input"><span>@</span><input id="username" placeholder="username" autocomplete="off" spellcheck="false"></div>
+      <button id="scan" class="scan" type="submit"><span data-i18n="scan">INTIP</span><b>↗</b></button>
+    </form>
+  </section>
+
+  <section id="empty" class="empty">
+    <div class="empty-icon">✦</div><span data-i18n="ready">Enter a username to see the profile.</span>
+  </section>
+
+  <section id="loading" class="loading hidden">
+    <div class="loader-orb">ST</div><b data-i18n="scanning">SCANNING...</b>
+  </section>
+
+  <section id="error" class="error hidden">
+    <strong>!</strong><div><b id="errorMsg">Error</b><small data-i18n="tryAgain">Try another username.</small></div>
+    <button id="retry">↻</button>
+  </section>
+
+  <section id="result" class="hidden">
+    <div class="profile neo">
+      <div class="avatar-box"><img id="avatar" alt="Profile"></div>
+      <div class="identity">
+        <div class="verified" data-i18n="public">PUBLIC</div>
+        <h2 id="name">—</h2>
+        <p id="handle">@—</p>
+        <div class="profile-buttons"><button id="copy">COPY</button><a id="open" target="_blank" rel="noopener">TIKTOK ↗</a></div>
+      </div>
+      <div class="badge">TT<br>01</div>
+    </div>
+
+    <div class="stats">
+      <div class="stat neo pink"><small data-i18n="followers">FOLLOWERS</small><b id="followers">0</b></div>
+      <div class="stat neo cyan"><small data-i18n="following">FOLLOWING</small><b id="following">0</b></div>
+      <div class="stat neo yellow"><small data-i18n="hearts">HEARTS</small><b id="hearts">0</b></div>
+      <div class="stat neo lilac"><small data-i18n="videos">VIDEOS</small><b id="videos">0</b></div>
+      <div class="stat neo"><small data-i18n="friends">FRIENDS</small><b id="friends">0</b></div>
+    </div>
+
+    <div class="account neo">
+      <div class="account-title"><span data-i18n="account">ACCOUNT</span><i id="updated">—</i></div>
+      <div class="account-grid">
+        <div><small data-i18n="created">ACCOUNT CREATED</small><b id="created">N/A</b></div>
+        <div><small data-i18n="modified">NICKNAME MODIFIED</small><b id="modified">N/A</b></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><span>ONEDEV © 2026</span><span>PUBLIC DATA ONLY</span></footer>
+<div id="toast" class="toast"></div>
+<script src="script.js"></script>
+</body>
+</html>
